@@ -1,0 +1,105 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.intro {
+  padding: 50px;
+  width: 50%;
+}
+
+.intro h1 {
+  color: #00897b;
+  font-size: 28px;
+}
+
+.intro h3 {
+  color: #323232;
+  margin-top: 50px;
+}
+
+.intro ul {
+  padding-left: 0;
+  height: 400px;
+  overflow: scroll;
+}
+
+.intro ul li {
+  margin: 10px 0;
+  padding: 15px;
+  display: block;
+  position: relative;
+	width: 200px;
+	height: auto;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.intro input {
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #757575;
+  padding: 10px;
+  background: transparent;
+}
+
+.intro input:focus {
+  border-bottom: 2px solid #00897b;
+  box-shadow: none;
+  outline: none;
+}
+
+.intro button {
+  background-color: #00897b;
+  color: white;
+}
+
+.notification {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #00897b;
+  color: white;
+}
+
+.notification p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.notification button {
+  color: #00897b;
+}
+
+.notification button:disabled {
+  background-color: #ddd;
+}
+
+@media screen and (max-width: 767px) {
+  .main-content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .intro {
+    width: 100%;
+  }
+}

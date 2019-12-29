@@ -6,34 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>N-Chat</title>
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .intro,
-    #messages {
-      padding: 50px;
-    }
-
-    .intro h1 {
-      color: green;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
-  <div class="intro">
-    <h1>N-Chat</h1>
-    <p>Drop your message below</p>
-    <input type="text" id="messageBox" placeholder="Enter message">
-    <button type="button" onclick="addMessage()">Submit</button>
-  </div>
+  <div class="main-content">
+    <div class="intro">
+      <h1>Ni-Chat</h1>
+      <p>Drop your message below</p>
+      <input type="text" id="messageBox" placeholder="Enter message">
+      <button type="button" onclick="addMessage()">Submit</button>
 
-  <!-- <h2>Current messages</h2> -->
-  <div id="messages"></div>
+      <h3>Latest messages</h3>
+      <div id="messages"></div>
+    </div>
+    <div class="notification">
+      <p>Subscribe to push notifications to get updates on what is popping!</p>
+      <button id="pushBtn" type="button" disabled>Enable push notifications</button>
+    </div>
+  </div>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
@@ -42,6 +34,7 @@
        https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js"></script>
 
   <script src="main.js"></script>
 
